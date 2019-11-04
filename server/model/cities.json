@@ -1,0 +1,14 @@
+[
+{
+    "name": "Paris",
+    "temperature": 29,
+    "condition": "Sunny",
+    "conditionPic": "url"
+},
+{
+    "name": "London",
+    "temperature": 18,
+    "condition": "Rain",
+    "conditionPic": "url"
+}
+]

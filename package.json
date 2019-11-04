@@ -1,7 +1,6 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +11,20 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "handlebars": "^4.4.5",
+    "handlebars": "^4.5.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.7.7",
-    "request": "^2.88.0"
-  }
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rachel-Aizenman/Weather-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rachel-Aizenman/Weather-App/issues"
+  },
+  "homepage": "https://github.com/Rachel-Aizenman/Weather-App#readme",
+  "devDependencies": {},
+  "description": ""
 }
