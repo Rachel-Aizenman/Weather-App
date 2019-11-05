@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
-    <button onClick=getDataFromDB() >Click</button>
+        <div id="container">
+                    <h1>Type City Name</h1>
+                    <input type="text" id="city-input" placeholder="City Name Here">
+                    <button onclick=handleSearch()>show</button>
+
+                    
+                <div id="display-cityData"></div>
+            </div>
+
+            <script id="cityData-template" type="text/x-handlebars-template">
+        {{#each allCityData}}
+            {{name}}
+            {{temperature}}
+            {{condition}}
+            {{conditionPic}}
+        {{/each}}
+    
+    </script>
+
+
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
     <script src="TempManager.js"></script>
+    <script src= "Renderer.js"></script>
     <script src="main.js"></script>
-    <script src= "model.js"></script>
+    
     
 </body>
 </html>
