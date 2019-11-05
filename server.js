@@ -3,12 +3,11 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const router = express.Router()
 const path = require('path')
-const port = 3000
+const PORT = 8080
 const app = express()
 const api = require('./server/routes/api')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/citiesDB', { useNewUrlParser: true,  useUnifiedTopology: true })
-app.use(bodyParser.urlencoded({ extended: false }))
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/yourDB');app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
@@ -24,7 +23,7 @@ app.use('/', api)
 
 
 //======//
-app.listen(port, function () {
+app.listen(process.env.PORT || PORT, function () {
     console.log(`Running server on port ${port}`)
 })
 
