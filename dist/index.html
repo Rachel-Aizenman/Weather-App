@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather App</title>
+    <script ref=""></script>
 </head>
 <body>
         <div id="container">
-                    <h1>Type City Name</h1>
+                    <h1>What's the Weather</h1>
                     <input type="text" id="city-input" placeholder="City Name Here">
-                    <button onclick=handleSearch()>show</button>
+                    <button id ="search">show</button>
 
                     
                 <div id="display-cityData"></div>
@@ -18,10 +19,14 @@
 
             <script id="cityData-template" type="text/x-handlebars-template">
         {{#each allCityData}}
-            {{name}}
-            {{temperature}}
-            {{condition}}
-            {{conditionPic}}
+        <div class="traverse">
+            <div class="name">{{name}}</div>
+            <div class="temperature"> {{temperature}}</div>
+            <div class="condition">{{condition}}</div>
+            <div class="conditionPic">{{conditionPic}}</div> 
+            <button class="save">save</button>
+            <button class="delete">delete</button>
+        </div>
         {{/each}}
     
     </script>

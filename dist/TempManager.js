@@ -9,8 +9,8 @@ class TempManager {
     }
 
     async getCityData(cityName) {
-        const data = await $.get(`/city/${cityName}`)
-        this.cityData.push(data)
+      const data = await $.get(`/city/${cityName}`)
+      this.cityData.push(data)
     }
 
     async saveCity(cityName) {
@@ -18,19 +18,20 @@ class TempManager {
         await $.post('/city', city)
     }
 
-    async removeCity(cityName) {
+     removeCity(cityName) {
+        const cityIndex = this.cityData.findIndex(c => c.name === cityName)
+        this.cityData.splice(cityIndex, 1)
         $.ajax({
             method: 'DELETE',
-            url: 'https://localhost:3000/city/' + cityName,
+            url: 'http://localhost:3000/city/' + cityName,
             type: JSON,
-            success: function (url) {
-                console.log("success")
+            success: function (data) {
+                 console.log(data)
             },
             error: function (xhr, text, error) {
                 console.log(error)
             }
         })
-        await $.delete('/city', city)
     }
 
 
