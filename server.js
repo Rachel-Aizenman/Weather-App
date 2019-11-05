@@ -7,7 +7,8 @@ const PORT = 8080
 const app = express()
 const api = require('./server/routes/api')
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/yourDB');app.use(bodyParser.urlencoded({ extended: false }))
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/yourDB');
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
@@ -24,6 +25,6 @@ app.use('/', api)
 
 //======//
 app.listen(process.env.PORT || PORT, function () {
-    console.log(`Running server on port ${port}`)
+    console.log(`Running server on port ${PORT}`)
 })
 
