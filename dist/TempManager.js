@@ -1,3 +1,4 @@
+
 class TempManager {
     constructor() {
         this.cityData = []
@@ -9,29 +10,39 @@ class TempManager {
     }
 
     async getCityData(cityName) {
-      const data = await $.get(`/city/${cityName}`)
-      this.cityData.push(data)
-    }
+        // try {
+           const data = 
+           await $.get(`/city/${cityName}`)
+            // if (data.err) {
+                // throw new Error("broooo")
+            // } else {
+                this.cityData.push(data)
+
+            } 
+        // }
+        // catch (err) { return err }
+    // }
 
     async saveCity(cityName) {
         const city = this.cityData.find(c => c.name === cityName)
         await $.post('/city', city)
     }
 
-     removeCity(cityName) {
+    removeCity(cityName) {
         const cityIndex = this.cityData.findIndex(c => c.name === cityName)
-        this.cityData.splice(cityIndex, 1)
         $.ajax({
             method: 'DELETE',
-            url: 'http://localhost:3000/city/' + cityName,
+            url: 'http://localhost:8080/city/' + cityName,
             type: JSON,
             success: function (data) {
-                 console.log(data)
+                // console.log(data)
             },
             error: function (xhr, text, error) {
-                console.log(error)
+                // console.log(error)
             }
         })
+        this.cityData.splice(cityIndex, 1)
+
     }
 
 

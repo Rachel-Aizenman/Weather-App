@@ -1,4 +1,6 @@
+
 class Renderer{
+     
      renderData (allCityData) {
       $("#display-cityData").empty()
         const source = $("#cityData-template").html()

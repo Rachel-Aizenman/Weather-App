@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather App</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css"></head>
 <body>
         <div id="container">
                     <h1>What's the Weather</h1>
-                    <div class="input-button">
-                    <input type="text" id="city-input" placeholder="City Name Here">
-                    <button id ="search">show</button>
-                </div>
+                    <!-- <div class="input-button"> -->
+                    <!-- <input type="text" id="city-input" placeholder="City Name Here"> -->
+                    <!-- <button >show</button> -->
+                <!-- </div> -->
                     
                 <div id="display-cityData"></div>
             </div>
 
+            <div class="wrap">
+                <div class="search">
+                   <input type="text" id ="search-input" class="searchTerm" placeholder="What are you looking for?">
+                   <button type="submit" id ="show-button" class="searchButton">
+                     <i class="fa fa-search">S</i>
+                  </button>
+                </div>
+             </div>
+        
+
+
             <script id="cityData-template" type="text/x-handlebars-template">
         {{#each allCityData}}
-        <div class="traverse">
+        <div id="city">
             <div class="name">{{name}}</div>
             <div class="temperature"> {{temperature}}</div>
             <div class="condition">{{condition}}</div>
-            <div class="conditionPic">{{conditionPic}}</div> 
-            <button class="save">save</button>
-            <button class="delete">delete</button>
+            <img class="conditionPic" src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png" alt =" " >
+            <button class="save simple-button"  class="searchButton">save</button>
+            <button class="delete simple-button">delete</button>
         </div>
         {{/each}}
     

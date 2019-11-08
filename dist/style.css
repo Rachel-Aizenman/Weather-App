@@ -1,69 +1,110 @@
-body{
-    display: 100vh;
-    background-color: rgba(128, 128, 128, 0.76);
+ #container{
+     text-align: center;
+ }
+ body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#display-cityData{
-    display: inline-grid;
-    grid-gap: 30px;
-    grid-template-columns: 300px 300px 300px;
-    position: absolute;
-    top: 110px;
-    left: 50%;
-    transform: translate(-50%);
-    min-width: 500px;
-    
-    }
-
-    
-#recipes{
-        text-align: center;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(255, 255, 0, 0.582); 
-    }
-
-.ingredients{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+.search {
+  width: 100%;
+  position: absolute;
+  display: flex;
 }
 
-#recipes:hover{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   background-color: rgba(238, 238, 238, 0.37);
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
 
-img{
-    height: 100%;
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+    display: inline-block;
     width: 100%;
-    max-height: 150px;
-    object-fit: cover;
-
-}
-
-.input-button{
-    display: grid;
-    max-width: 100px;
+    border-right: none; 
     position: relative;
     left: 50%;
-    transform: translate(-50%);
-    /* margin: 20px;  */
+    transform: translate(-50%, -50%);
+    color: #00B4CC;
+  }
+
+  .simple-button {
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    outline: none;
+    padding: 0.278em 0.556em;
+    background: #00B4CC;
+    border-radius: 0.22em;
+    
+    text-shadow: 0 -0.056em 0 rgba(0,0,0,.3);
+    
+    cursor: pointer;
+  }
+  
+  .simple-button:active {
+    
+    text-shadow: 0 -0.056em 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 0.556em rgba(0, 0, 0, 0.5) inset;
+    position: relative;
+    top: 0.167em;
+  }
+  
+  #city{
+    display: block;
+    color: #fff;
+    top: 50px;
+    background-color: rgba(84, 192, 196, 0.356);
+    font-size: 30px;
+    margin: 30px;
+
+  }
+
+  #display-cityData{
+    display: block;
+    top: 50px;
+  }
+
+  .save:active{
+      background-color: green;
+      text-shadow: 0 -0.056em 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 0.556em rgba(0, 0, 0, 0.5) inset;
+    position: relative;
+    top: 0.167em;
+  }
+
+  .delete:active{
+    background-color: red;
+    text-shadow: 0 -0.056em 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 0.556em rgba(0, 0, 0, 0.5) inset;
+    position: relative;
+    top: 0.167em;
 }
-
-button{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    size: 100px;
-    background: transparent;
-    border: 1px solid rgba(127, 127, 230, 0.87);
-
-}
-
-
-input{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-
