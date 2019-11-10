@@ -1,7 +1,5 @@
 const express = require("express")
 const bodyParser = require('body-parser')
-// const request = require('request')
-// const router = express.Router()
 const path = require('path')
 const PORT = 8080
 const app = express()

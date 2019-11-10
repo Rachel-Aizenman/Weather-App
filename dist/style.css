@@ -82,6 +82,7 @@ h1 {
     display: block;
     color: #fff;
     top: 50px;
+    text-align: center;
     background-color: rgba(84, 192, 196, 0.356);
     font-size: 30px;
     margin: 30px;

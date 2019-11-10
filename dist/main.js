@@ -17,7 +17,6 @@ const handleSearch = async function(){
 
 $("#show-button").on("click", function(){
     handleSearch()
-    $("#search-input").val("") 
 })
 
 
