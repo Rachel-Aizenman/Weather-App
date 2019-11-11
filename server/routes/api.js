@@ -19,6 +19,7 @@ router.get('/city/:cityName', function (req, res) {
                 conditionPic: dataParsed.weather[0].icon
             }
 
+            
             res.send(filteredData)
 
         }
