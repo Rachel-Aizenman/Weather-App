@@ -9,13 +9,13 @@ class TempManager {
     }
 
     async getCityData(cityName) {
-        // if (!this.cityData.find(c => c.name.toLowercase() === cityName.toLowercase())) {
             const data = await $.get(`/city/${cityName}`)
             if (!data.name) {
                 alert("You've entered an invalid city name")
                 return
             }
             this.cityData.push(data)
+            
         }
     
 
